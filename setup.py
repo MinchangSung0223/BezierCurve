@@ -12,11 +12,11 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'mypackage'
-DESCRIPTION = 'My short description for my project.'
-URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+NAME = 'BezierCurve'
+DESCRIPTION = 'BezierCurve Generator'
+URL = 'https://github.com/tjdalsckd/BezierCurve'
+EMAIL = 'tjdalsckd@gmail.com'
+AUTHOR = 'Minchang Sung'
 REQUIRES_PYTHON = '>=3.6.0'
 VERSION = None
 
