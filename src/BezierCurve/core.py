@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from modern_robotics import *
 from math import *
+
 class BezierCurve:
 	def __init__(self,points,weights,number):
 		self.points = np.array(points);
@@ -67,4 +69,16 @@ class BezierCurve:
 			ret_P.append(self.P(0,n,t))
 			ret_P_prime.append(self.P_prime(0,t))
 			ret_P_two_prime.append(self.P_two_prime(0,n,t))
+		return np.array(ret_P),np.array(ret_P_prime),np.array(ret_P_two_prime)		
+	def get_bazier_curve_s(self,s):
+		dt = 1/self.number
+		n = self.n
+		ret_P=[]
+		ret_P_prime=[]	
+		ret_P_two_prime=[]	
+		
+		t= s;
+		ret_P.append(self.P(0,n,t))
+		ret_P_prime.append(self.P_prime(0,t))
+		ret_P_two_prime.append(self.P_two_prime(0,n,t))
 		return np.array(ret_P),np.array(ret_P_prime),np.array(ret_P_two_prime)		
